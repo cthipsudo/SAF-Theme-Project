@@ -1,0 +1,11 @@
+[ {
+  "id" : "c415e4f6-50df-ebab-83dd-459b854770f8",
+  "name" : "value",
+  "label" : "Custom CSS Class (Optional)",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+} ]
