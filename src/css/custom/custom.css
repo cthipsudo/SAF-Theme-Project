@@ -214,3 +214,23 @@ p {
   font-weight: 500;
   color: #333;
 }
+
+{###########################################################################}
+{############################   7. Site Header   #############################}
+{###########################################################################}
+
+header .header__search form label {
+  display: none;
+}
+
+header .navigation-primary a {
+  color:#5B5B5B;
+  font-family: 'Avenir', sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.header__row-1, .header__logo--main {
+  padding: 20px 0;
+}
