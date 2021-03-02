@@ -1,0 +1,165 @@
+[ {
+  "id" : "2521bc03-da38-cd50-a707-d33ead44a278",
+  "name" : "content_",
+  "label" : "Content ",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h2>This is your title?</h2>\n<p><span>Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag. Brunch raclette vexillologist post-ironic glossier ennui XOXO.</span></p>"
+}, {
+  "id" : "37c63229-a35f-58de-6e53-736c06a99c2b",
+  "name" : "content_alignment",
+  "label" : "Content Alignment",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "value 1", "Label 1" ], [ "value 2", "Label 2" ] ],
+  "type" : "choice"
+}, {
+  "id" : "015753e6-16e3-3055-2b7f-b0e5d954c857",
+  "name" : "cta_field",
+  "label" : "CTA",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta"
+}, {
+  "id" : "2b7ae553-5780-8b52-f7ab-7f1fa266f07e",
+  "name" : "styles",
+  "label" : "Styles",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "be8c0bb3-a8c1-31f1-44c5-8d838fa170d9",
+    "name" : "background_choice",
+    "label" : "Background Choice",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "color", "Color" ], [ "background_image", "Background Image" ] ],
+    "type" : "choice"
+  }, {
+    "id" : "ebc26b69-b2fb-2d86-7d3a-1a575aa2d15c",
+    "name" : "background_image",
+    "label" : "Background Image",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "be8c0bb3-a8c1-31f1-44c5-8d838fa170d9",
+      "controlling_value_regex" : "background_image",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent20.net/hubfs/1611177/Web%20design/Six%20and%20Flow%20Redesign%202021/Blue%20Background%20-%20Colored%20Shapes.jpg",
+      "alt" : "Blue Background - Colored Shapes",
+      "loading" : "lazy",
+      "width" : 1440,
+      "height" : 544,
+      "max_width" : 1440,
+      "max_height" : 544
+    }
+  }, {
+    "id" : "bd11d7bb-4c55-bcdd-8736-0c714e4c1996",
+    "name" : "background_color",
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "be8c0bb3-a8c1-31f1-44c5-8d838fa170d9",
+      "controlling_value_regex" : "color",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "type" : "color",
+    "default" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "b9a1209e-ad96-169c-a78a-4125d8dc291b",
+    "name" : "content_box_width",
+    "label" : "Content Box Width",
+    "help_text" : "Decides the max width of the content container. ",
+    "inline_help_text" : "For Tablet and Desktop.",
+    "required" : false,
+    "locked" : false,
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 600
+  }, {
+    "id" : "21ca871c-7cd3-8ab5-36d4-a9fdbfe7e654",
+    "name" : "show_shapes_",
+    "label" : "Show Shapes?",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "background_image" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent20.net/hubfs/1611177/Web%20design/Six%20and%20Flow%20Redesign%202021/Blue%20Background%20-%20Colored%20Shapes.jpg",
+      "alt" : "Blue Background - Colored Shapes",
+      "loading" : "lazy",
+      "width" : 1440,
+      "height" : 544,
+      "max_width" : 1440,
+      "max_height" : 544
+    },
+    "background_color" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    },
+    "content_box_width" : 600,
+    "show_shapes_" : false
+  }
+}, {
+  "id" : "4f9d7ce6-f1a1-414c-6eb2-f9b537e7edea",
+  "name" : "developer_options_check",
+  "label" : "Developer Options",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "e0543860-922e-2698-fd3c-aa8c9046a9d4",
+  "name" : "developer_options",
+  "label" : "Developer Options",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "4f9d7ce6-f1a1-414c-6eb2-f9b537e7edea",
+    "controlling_value_regex" : "true",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "f9b70946-a29d-551e-e0ff-6a600e3479f4",
+    "name" : "dev_notes",
+    "label" : "Dev Notes",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : { }
+} ]
