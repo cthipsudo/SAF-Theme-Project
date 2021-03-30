@@ -1,16 +1,17 @@
 {# -------------------------------- Import Fonts and Things here ------------------------------ #}
 
+
 {## Table of contents
 
-  1. Variables
-	1a. Containers
-	1b. Colors
-	1c. Typography
-	1d. Buttons
-	1e. Forms
-	1f. Tables
-	1g. Site header
-	1h. Site footer
+  1. Variables <------------------------------ Change values here ------
+    1a. Containers
+    1b. Colors
+    1c. Typography
+    1d. Buttons
+    1e. Forms
+    1f. Tables
+    1g. Site header
+    1h. Site footer
   2. Containers / Grid / DnD Areas
   3. Typography
   4. Buttons
@@ -31,9 +32,7 @@
 
 {# Set Generic Variables here #}
 
-{###########################################################################}
-{############################   1a. Containers   #############################}
-{###########################################################################}
+/* 1a. Containers */
 
 {% set mobile_container = 400 %}
 {% set tablet_container = 600 %}
@@ -55,5 +54,93 @@
   }
 }
 
+/* 1b. Colors */
 
+{% set primary_color = '#7bdff2' %}
+{% set secondary_color = '#b2f7ef' %}
+  
+/* 1c. Typography */
 
+{% set primary_font = '' %}
+{% set secondary_font = '' %}
+
+{% set body_font = '' %}
+
+{% set h1_font_family = '" ", Courier, monospace;' %}
+{% set h1_size = '' %}
+{% set h1_weight = '' %}
+{% set h1_line_spacing = '' %}
+{% set h1_margins = 'px px' %}
+
+{% set h2_font_family = '" ", Courier, monospace;' %}
+{% set h2_size = '' %}
+{% set h2_weight = '' %}
+{% set h2_line_spacing = '' %}
+{% set h2_margins = 'px px' %}
+
+{% set h3_font_family = '" ", Courier, monospace;' %}
+{% set h3_size = '' %}
+{% set h3_weight = '' %}
+{% set h3_line_spacing = '' %}
+{% set h3_margins = 'px px' %}
+
+{% set h4_font_family = '" ", Courier, monospace;' %}
+{% set h4_size = '' %}
+{% set h4_weight = '' %}
+{% set h4_line_spacing = '' %}
+{% set h4_margins = 'px px' %}
+
+{% set h5_font_family = '" ", Courier, monospace;' %}
+{% set h5_size = '' %}
+{% set h5_weight = '' %}
+{% set h5_line_spacing = '' %}
+{% set h5_margins = 'px px' %}
+
+{% set h6_font_family = '" ", Courier, monospace;' %}
+{% set h6_size = '' %}
+{% set h6_weight = '' %}
+{% set h6_line_spacing = '' %}
+{% set h6_margins = 'px px' %}
+
+{% set anchor_font_color = '' %}
+
+/* 1d. Buttons */
+
+{% set button_bg_color = '' %}
+{% set button_font_color = '' %}
+{% set button_border = 'px solid ' %}
+{% set button_corner_radius = 'px' %}
+{% set button_padding = 'px px' %}
+/* 1e. Forms */
+
+{% set form_title_bg_color = '#' %}
+{% set form_title_font_color = '#' %}
+
+{% set form_label_font_color = '# ' %}
+{% set form_help_text_font_color = '# ' %}
+
+{% set form_input_border_color = '# ' %}
+{% set form_input_focus_border_color = '# ' %}
+
+/* 1f. Tables */
+
+{% set table_head_bg_color = '# ' %}
+{% set table_head_font_color = '# ' %}
+
+{% set table_bg_color = '# ' %}
+{% set table_font_color = '# ' %}
+{% set table_border_color = '# ' %}
+
+{% set table_footer_bg_color = '# ' %}
+{% set table_footer_font_color = '# '  %}
+
+/* 1g. Site header */
+
+{% set header_bg_color = color(theme.header.background_color) %}
+{% set header_nav_link_color = theme.header.menu_link_color.color %}
+{% set header_child_nav_border_color = theme.header.child_menu_border_color.color %}
+
+/* 1h. Site footer */
+
+{% set footer_bg_color = color(theme.footer.background_color) %}
+{% set footer_font_color = theme.footer.text_color.color %}
