@@ -1,0 +1,59 @@
+{# -------------------------------- Import Fonts and Things here ------------------------------ #}
+
+{## Table of contents
+
+  1. Variables
+	1a. Containers
+	1b. Colors
+	1c. Typography
+	1d. Buttons
+	1e. Forms
+	1f. Tables
+	1g. Site header
+	1h. Site footer
+  2. Containers / Grid / DnD Areas
+  3. Typography
+  4. Buttons
+  5. Forms
+  6. Tables
+  7. Site header
+  8. Site footer
+  9. Blog
+  10. System pages
+  11. Modules
+
+##}
+
+{###########################################################################}
+{############################   1. Variables   #############################}
+{###########################################################################}
+
+
+{# Set Generic Variables here #}
+
+{###########################################################################}
+{############################   1a. Containers   #############################}
+{###########################################################################}
+
+{% set mobile_container = 400 %}
+{% set tablet_container = 600 %}
+{% set desktop_container = 1200 %}
+
+.box-container {
+  max-width: {{ mobile_container }}px;
+}	
+
+@media all and (min-width: 800px) {
+  .box-container {
+    max-width: {{tablet_container}}px;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .box-container {
+    max-width: {{tablet_container}}px;
+  }
+}
+
+
+
