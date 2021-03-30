@@ -1,0 +1,49 @@
+<section class="{{name}} main-content" 
+         style="{% if module.styles.background_choice == 'color' %}
+                  background-color: {{ module.styles.background_color.color }};
+                {% elif module.styles.background_choice == 'background_image' %}
+                  background-image: url({{ module.styles.background_image.src }});
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  background-postion: center;
+                {% endif %}">
+  {% if module.styles.show_shapes_ %}
+    <div class="shape-container">
+      <svg viewBox="0 0 4100 1300" id="icon--header-inner" class="desktop-up">
+        <g fill-rule="evenodd" >
+          <path d="M945.25 1128.78c-24.69 31.22-73.58 25.75-90.76-10.16L481.07 338.67c-19.16-40 15.61-84.71 59.09-76l855.23 170.86c39.43 7.86 56.63 54.62 31.68 86.16z" fill="#fff"></path>
+          <path d="M0 11245 l0 -5075 6002 0 c5370 0 6013 2 6103 15 146 23 291 60 375 96 75 33 98 43 130 59 165 84 273 163 410 300 154 153 259 306 335 485 9 22 20 49 25 60 33 73 72 227 95 370 13 90 15 571 15 4433 l0 4332 -6745 0 -6745 0 0 -5075z" 
+          transform="translate(800,1632.000000) scale(0.100000,-0.170000)"
+          fill="#1b1d49" stroke="none" />
+          <path d="M936 5899 c-599 -128 -748 -205 -869 -454 -128 -261 -64 -450 308
+          -905 432 -528 1254 -1545 1502 -1857 l243 -307 0 1812 0 1812 -365 -2 c-356
+          -3 -376 -5 -819 -99z" transform="translate(2500.000000,1500.000000) scale(0.250000,-0.250000)"
+          fill="#40c388" stroke="none" />
+        </g>
+      </svg>
+      <svg viewBox="0 0 720 1080" id="icon--header-mobile" class="mobile-only"><g fill-rule="evenodd" transform=""><path d="M504 946.18L286.66 1003 0 1078V414h134.53l.08.08L530.52 858.3c26.76 30 12.37 77.7-26.52 87.88z" fill="#1b1d49"></path><path fill="#1b1d49" d="M720 0v1052.99l-181.57-20.93-251.77-29.02L0 969.99V0h720z"></path></g></svg>
+    </div>
+  {% endif %}
+  <div class="content-wrapper">
+    <div class="banner-content"
+         style="max-width: {{ module.styles.content_box_width }}px;">
+      {% inline_rich_text field="content_" value="{{ module.content_ }}" %}
+      <div class="cta-box">
+        {% cta guid="{{ module.cta_field }}" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% require_css %}
+  <style>
+    .{{name}} .content-wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+  </style>
+{% end_require_css %}

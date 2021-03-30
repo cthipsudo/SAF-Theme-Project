@@ -40,14 +40,9 @@
           {% module 'site_search' path='@hubspot/search_input',
             label='Search',
             field_label='Search',
-            placeholder=''
+            placeholder='Search'
           %}
         </div>
-      </div>
-      {# End header navigation row one #}
-
-      {# Header navigation row two #}
-      <div class="header__row-2">
         <div class="header--toggle header__navigation--toggle"></div>
         {% if content.translated_content|length || is_listing_view && group.translations %}
           <div class="header--toggle header__language-switcher--toggle"></div>
@@ -59,7 +54,14 @@
             label='Primary navigation'
           %}
         </div>
+        <div class="header__cta">
+          {% module 'cta' path='@hubspot/cta' %}
+        </div>
       </div>
+      {# End header navigation row one #}
+
+      {# Header navigation row two #}
+  
       {# End header navigation row two #}
 
     </div>

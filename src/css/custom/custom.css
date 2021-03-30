@@ -1,0 +1,236 @@
+{# Custom Styling and Placeholder for the 2021 SAF Site #}
+
+{# , ,, ,                              
+| || |    ,/  _____  \.             
+\_||_/    ||_/     \_||             
+  ||       \_| . . |_/              
+  ||         |  L  |                
+ ,||         |`==='|                
+ |>|      ___`>  -<'___             
+ |>|\    /             \            
+ \>| \  /  ,    .    .  |           
+  ||  \/  /| .  |  . |  |           
+  ||\  ` / | ___|___ |  |     (     
+(( || `--'  | _______ |  |     ))  ( 
+(  )\|| (  )\ | - --- - | -| (  ( \  ))
+(\/  || ))/ ( | -- - -- |  | )) )  \(( 
+( ()||((( ())|         |  |( (( () ) #}
+
+
+{# ------------------------------------- Imports and font faces here ---------------------------------- #}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+@font-face {
+  font-family: "Avenir";
+  src: url({{get_asset_url('../../fonts/Metropolis-Light.otf')}}) format("opentype");
+  font-weight: 500;
+}
+
+
+{# ------------------------------- End of Imports and font faces here --------------------------------- #}
+
+{## Table of contents
+
+  1. Variables
+    1a. Containers
+    1b. Colors
+    1c. Typography
+    1d. Buttons
+    1e. Forms
+    1f. Tables
+    1g. Site header
+    1h. Site footer
+  2. Containers / Grid / DnD Areas
+  3. Typography
+  4. Buttons
+  5. Forms
+  6. Tables
+  7. Site header
+  8. Site footer
+  9. Blog
+  10. System pages
+  11. Modules
+
+##}
+
+{# SAF Colors #}
+
+
+{###########################################################################}
+{############################   1. Variables   #############################}
+{###########################################################################}
+
+/* 1a. Containers */
+
+/* 1b. Colors */
+
+.color--dark-blue {
+  color: #1E1E4F; /*  Dark Blue */
+}
+.color--dark-blue-light {
+  color: #45487F; /*  Dark Blue Light */
+}
+.color--dark-blue-lighter {
+  color: #8D8EC1; /*  Dark Blue Lighter */
+}
+.color--dark-blue-lightest {
+  color: #D7D8FC; /*  Dark Blue Lightest */
+}
+
+.color--light-blue {
+  color: #019FD6; /*  Light Blue */
+}
+.color--light-blue-light {
+  color: #7FC3E2; /*  Light Blue Light */
+}
+.color--light-blue-lighter {
+  color: #A2DBF2; /*  Light Blue Lighter */
+}
+.color--light-blue-lightest {
+  color: #E5F6FE; /*  Light Blue Lightest */
+}
+
+.color--green {
+  color: #00A79D; /* Base Green */
+}
+.color--green-light {
+  color: #87D1D4; /* Light Green */
+}
+.color--green-lighter {
+  color: #ACECE8; /* Lighter Green */
+}
+.color--green-lightest {
+  color: #D8FBFA; /* Lightest Green */
+}
+
+.color--orange {
+  color: #EA7765; /* Base Orange */
+}
+.color--orange-light {
+  color: #EBB1A5; /* Light Orange */
+}
+.color--orange-lighter {
+  color: #F9DAD3; /* Lighter Orange */
+}
+.color--orange-lightest {
+  color: #FCEBE7; /* Lightest Orange */
+}
+
+.color--red {
+  color: #DA3964; /* Base Red */
+}
+.color--red-light {
+  color: #DC7A92; /* Light Red */
+}
+.color--red-lighter {
+  color: #EDB9C6; /* Lighter Red */
+}
+.color--red-lightest {
+  color: #F7E0E8; /* Lightest Red */
+}
+
+.color--yellow {
+  color: #F4C540; /* Base Yellow */
+}
+.color--yellow-light {
+  color: #F0D690; /* Light Yellow */
+}
+.color--yellow-lighter {
+  color: #F8E8B7; /* Lighter Yellow */
+}
+.color--yellow-lightest {
+  color: #FDF4D7; /* Lightest Yellow */
+}
+
+.color--black {
+  color: #000000; /* Base Black */
+}
+.color--black-light {
+  color: #333333; /* Light Black */
+}
+.color--black-lighter {
+  color: #5B5B5B; /* Lighter Black */
+}
+
+.color--grey {
+  color: #F1F1F1; /* Base Grey */
+}
+.color--white {
+  color: #FFF; /* Base Grey */
+}
+
+{###########################################################################}
+{############################   3. Typography   #############################}
+{###########################################################################}
+
+/* Headings */
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 60px;
+  line-height: 80px;
+  font-weight: 700;
+  color: #1e2048;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 45px;
+  line-height: 68px;
+  font-weight: 700;
+  color: #1e2048;
+}
+
+h3 {
+  font-family: 'Avenir', sans-serif;
+  font-size: 25px;
+  line-height: 40px;
+  font-weight: 500;
+  color: #1e2048;
+}
+
+h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+  line-height: 40px;
+  font-weight: 700;
+  color: #1e2048;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-family: 'Avenir', sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #1e2048;
+}
+
+p {
+  font-family: 'Avenir', sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 500;
+  color: #333;
+}
+
+{###########################################################################}
+{############################   7. Site Header   #############################}
+{###########################################################################}
+
+header .header__search form label {
+  display: none;
+}
+
+header .navigation-primary a {
+  color:#5B5B5B;
+  font-family: 'Avenir', sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.header__row-1, .header__logo--main {
+  padding: 20px 0;
+}
